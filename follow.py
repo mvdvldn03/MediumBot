@@ -17,16 +17,18 @@ def setup(driver):
     login_button.click()
     sleep(2)
 
-    email = driver.find_element_by_xpath("//input[@type='email']")
-    email.send_keys('21mvandervelden@woodward.edu')
+    e_box = driver.find_element_by_xpath("//input[@type='email']")
+    email = input("Email?")
+    e_box.send_keys(email)
     nextButton = driver.find_element_by_xpath("//button[@class='VfPpkd-LgbsSe VfPpkd-LgbsSe-OWXEXe-k8QpJ VfPpkd-LgbsSe-OWXEXe-dgl2Hf nCP5yc AjY5Oe DuMIQc qIypjc TrZEUc']")
     nextButton.click()
     sleep(2)
 
     driver.save_screenshot("input.png")
 
-    passwordElem = driver.find_element_by_xpath("//input[@type='password']")
-    passwordElem.send_keys('12267wams')
+    p_box = driver.find_element_by_xpath("//input[@type='password']")
+    password = input("Password?")
+    p_box.send_keys(password)
     signInButton = driver.find_element_by_xpath("//button[@class='VfPpkd-LgbsSe VfPpkd-LgbsSe-OWXEXe-k8QpJ VfPpkd-LgbsSe-OWXEXe-dgl2Hf nCP5yc AjY5Oe DuMIQc qIypjc TrZEUc']")
     signInButton.click()
     sleep(2)
